@@ -1,32 +1,66 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.header-container {
+  display: flex;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), 
+  url('https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-size: cover;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+  width: 50%
+}
+
+.title {
   color: white;
+  font-size: 36px;
+  font-weight: 700;
 }
 
-.App-link {
-  color: #61dafb;
+.subtitle {
+  color: white;
+  font-size: 18px;
+  font-weight: 450;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.info-container {
+  display: inline;
+  padding-top: 15%;
+  text-align: center;
+  background-color: midnightblue;
+  color: white;
+  width: 50%; 
+}
+
+.form-input {
+  padding: 10px;
+  margin: 5px;
+  background-color: beige;
+  border-radius: 5px;
+  color: grey;
+  font-size: 18px;
+  font-weight: 450;
+}
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 450;
+}
+
+.pollution {
+  font-weight: 450;
+  font-size: 18px;
+  padding: 15px;
+  margin: 15px;
+}
+
+.api {
+  padding: 20px;
+  margin: 20px;
 }

@@ -19,20 +19,30 @@ class App extends Component {
     const city =  e.target.elements.city.value;
     const api_call = await fetch(`http://api.waqi.info/feed/${city}/?token=${API_KEY}`)
     const data = await api_call.json();
+    try {
     this.setState({
       city: data.data.city.name,
-      pollution: data.data.aqi
+      pollution: Number(data.data.aqi)
     })
-  
+  } catch (city) {
+    this.setState({
+      city: "Unknown City",
+      pollution: "Unkown AQI"
+    })
+  }
   }
 
 
   render() {
     return (
       <div className="App">
-        <Header />
+      <div className='header-container'>
+        <Header className='header-container' />
+        </div>
+        <div className='info-container'>
         <Form getPollution={this.getPollution} />
         <Pollution city={this.state.city} pollution={this.state.pollution} />
+      </div>
       </div>
     );
   }
