@@ -4,7 +4,7 @@ Currently shows Air Quality Index for cities around the world, using the API fro
 
 Still to do:
 
-- Fix errors for unknown cities
+- Fix errors for unknown cities (Done)
 - Add options for countries
 - Add key
-- Fix Styling
+- Fix Styling (Done)
