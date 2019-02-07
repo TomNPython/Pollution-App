@@ -2,6 +2,7 @@
   display: flex;
   margin: 0;
   padding: 0;
+  height: fit-content
 }
 
 .header-container {
@@ -11,34 +12,37 @@
   background-size: cover;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  width: 50%
+  width: 50%;
 }
 
 .title {
   color: white;
   font-size: 36px;
   font-weight: 700;
+  text-align: center;
 }
 
 .subtitle {
   color: white;
   font-size: 18px;
   font-weight: 450;
+  text-align: center;
 }
 
 .info-container {
   display: inline;
-  padding-top: 15%;
+  position: relative;
   text-align: center;
   background-color: midnightblue;
   color: white;
   width: 50%; 
+  height: fit-content
 }
 
 .form-input {
-  padding: 10px;
+  padding: 5px;
   margin: 5px;
+  margin-top: 15px;
   background-color: beige;
   border-radius: 5px;
   color: grey;
@@ -47,7 +51,7 @@
 }
 
 button {
-  padding: 10px;
+  padding: 5px;
   border-radius: 5px;
   font-size: 18px;
   font-weight: 450;
@@ -56,11 +60,77 @@ button {
 .pollution {
   font-weight: 450;
   font-size: 18px;
-  padding: 15px;
-  margin: 15px;
+  padding: 5px;
+  margin: 5px;
 }
 
 .api {
-  padding: 20px;
-  margin: 20px;
+  padding: 5px;
+  margin: 5px auto 0px auto;
+  width: 40%;
+
+}
+
+#pollution-table {
+  border: 1px solid white;
+  margin: 20px auto 10px auto;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  max-width: 75%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 768px) {
+  #pollution-table {
+    display: none;
+  }
+
+  input {
+    font-size: 12px;
+    padding: 1px;
+    margin: 1px;
+    width: 80px;
+  }
+
+  .info-container {
+    height: 100vh
+  }
+
+  .header-container {
+    height: 100vh
+  }
+}
+
+#pollution-table td {
+  padding: 10px;
+}
+
+#title-aqi {
+  background-color: rgba(128, 128, 128, 0.5);
+}
+
+#lowest-aqi {
+  background-color: rgba(0, 128, 0, 0.8);
+}
+
+#lower-aqi {
+  background-color: rgba(255, 255, 0, 0.8);
+}
+
+#middle-aqi {
+  background-color: rgba(255, 165, 0, 0.8);
+}
+
+#higher-aqi {
+  background-color: rgba(255, 0, 0, 0.8);
+}
+
+#highest-aqi {
+  background-color: rgba(128, 0, 128, 0.8)
+}
+
+#danger-aqi {
+  background-color: rgba(165, 42, 42, 0.8)
 }
